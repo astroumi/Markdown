@@ -65,5 +65,46 @@ _there is **no overloading** in Python 3_
 - One method is in the **child class**
 - Overriding allows the child class to provide specific implementation for a method that **exists in the parent class**
 - You can also override built-in magic methods or base functions
+  - Can complete mathematical operations on custom Objects
+  - Can compare equality between custom Objects
+
+```python
+class Dog:
+	def __init__(self, name): #overriding init function
+		self.__name = name
+	def __str__(self): #overriding str function
+		return 'Woof, I’m %s.' % self.__name
+  def __repr__(self): #use repr and str together
+    return self.__str__()
+
+corgi = Dog('Tobasco')
+print(corgi) # 'Woof, I’m Tobasco.'
+```
 
 ## Polymorphism
+**A method that can be used across different classes and objects that is dependent on the parameters**
+- Different classes (non inherited) can have the same named methods
+- Within a set of inherited classes you can have the same methods
+- Overloading is a type of Polymorphism but illegal in Python 3
+- Overriding is also a type of Polyporphism
+
+```python
+class Bear:
+    def sound(self):
+        print("Groarrr")
+ 
+class Dog:
+    def sound(self):
+        print("Woof woof!")
+ 
+def makeSound(animalType):
+    animalType.sound()
+bearObj = Bear()
+dogObj = Dog()
+ 
+makeSound(bearObj)
+makeSound(dogObj)
+```
+In summary, we can have:
+- Two different classes have a same attributes and methods
+- A child of a parent have an overrided method where the child would utilize the method differently.
