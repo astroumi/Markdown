@@ -17,3 +17,26 @@ Types:
 - The child does not need a new __init__() method UNLESS it **requires new attributes**
 - The child does not need to reinstate the parent’s methods UNLESS you override them
 
+```python
+class Person: #parent class
+  def __init__(self, name):
+  	self.__name = name 
+  
+  def getName(self):
+    return self.__name
+
+class Student(Person): #inherited class
+  def __init__(self, name, num):
+    Person.__init__(self, name)
+    self.__sNum = num
+  
+  def getStudentName(self):
+    return('%s: %s' % (self.__sNum,self.getName()))
+
+#testing
+p = Person('Umair')
+s = Student('Rando', '1234')
+print(p.getName()) # Output: 'Umair'
+print(s.getStudentName(), “and” , s.getName()) # Output: “1234: Random Child and Random Child”
+```
+
