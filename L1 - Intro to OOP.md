@@ -1,7 +1,7 @@
 # Introduction to Object Oriented Programming
 
 ### Classes and Objects
-A class is a blueprint for creating objects. In OOP, an object is an instance of a class. The object can be stored in a variable, or other cata types.
+A class is a blueprint for creating objects. In OOP, an object is an instance of a class. The object can be stored in a variable, or other data types.
 - The object's data are called **attributes** (variables that belong to the object or class)
 - The object's code are called **methods** (functions that the object can call)
 
