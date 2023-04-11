@@ -19,7 +19,7 @@ class Student:
     return self.__studentNumber #only the method inside the class has access to the hidden attribute
 
   def actuallyGetStudentNumber(self): #hidden method (can be called by object)
-    return self.__firstName #only the method inside the class has access to the hidden attribute
+    return self.__studentNumber #only the method inside the class has access to the hidden attribute
 
 #end of Student
 s1 = Student("Mr.", "Park", 10)
