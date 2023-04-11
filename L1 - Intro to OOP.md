@@ -33,7 +33,7 @@ class Person:
 	def __init__(self, name): #initialization of attributes with class argument of name
 		self.name = name #creating the attribute self.name, which is accessible throughout the class or object
 	
-def greet(self): # the self parameter is always required
+	def greet(self): # the self parameter is always required
 		print('Hello, my name is', self.name)
 	#end of greet
 #end of class Person
